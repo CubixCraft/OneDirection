@@ -1,0 +1,34 @@
+name: OneDirection
+version: 0.0.0
+description: That's what makes your wood logs beautiful
+author: silvinci
+authors: [silvinci, _baam_, CubixCraft]
+website: https://github.com/CubixCraft/OneDirection
+
+main: com.github.cubixcraft.OneDirection.Main
+
+commands:
+  OneDirection:
+    description: Set the direction of log blocks
+    aliases: [1d, od]
+    permission: onedirection.use
+    usage: |
+      /<command> vertical
+      /<command> horizontal
+      /<command> lateral
+      /<command> none
+permissions:
+  onedirection.*:
+    description: Gives access too all of OneDirection's features (admin)
+    children:
+    - onedirection.admin
+    - onedirection.reload
+    - onedirection.use
+  eventmessages.admin:
+    description: Gives access to the ingame configuration of OneDirection
+    default: op
+  eventmessages.reload:
+    description: Allows to reload the configuration of OneDirection
+    default: op
+  eventmessages.use:
+    description: Allows to use OneDirection
